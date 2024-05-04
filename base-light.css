@@ -1,0 +1,327 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color:rgb(248, 248, 248);
+  }
+
+h1 {
+font-size:60px;
+}
+
+h2 {
+  font-size:40px;
+}
+
+.homeBanner {
+  background-color:rgb(231, 230, 230);
+  padding:5px;
+  margin-bottom:5px;
+  margin-left:-20px;
+  text-align:center;
+}
+.homeBanner h1 {
+  font-size: 80px;
+}
+
+/* Light navbar */
+  .navbar {
+    border-bottom-style: solid;
+    background-color: white;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .homeSectionsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow the sections to wrap */
+    justify-content: space-around; /* Center the sections horizontally */
+  }
+
+  .homeSection {
+    margin:20px;
+    padding:10px;
+    background-color:rgb(231, 230, 230);
+    color:black;
+    border-radius:5px;
+    height:fit-content;
+    flex: 1 1 300px;
+  }
+
+/* Dark Light Toggle */
+.switch {
+  position: relative;
+  display: block;
+  float: right;
+  width: 60px;
+  height: 34px;
+  top:10px;
+  right:10px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  transition: 0.4s;
+  -webkit-transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: rgb(79, 79, 79);
+  transition: 0.4s;
+  -webkit-transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(228, 228, 228);
+}
+
+/* ?? */
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color: white;
+}
+
+
+
+/*cookies*/
+  .cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 20px;
+    text-align: left;
+  }
+  
+  .cookies-banner p {
+    margin: 0;
+    padding:10px;
+    font-size:small;
+  }
+  
+  .cookies-banner a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .cookies-banner button {
+    background-color: #3d9eff;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    padding: 5px 10px;
+    margin-left:10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+
+/*Products*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  height: 230px;
+  text-align: left;
+  font-family:arial;
+  background-color:rgb(240, 240, 240);
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-list {
+  display: flex;
+}
+
+
+/* Learn more buttons */
+.addCart {
+  background-color: #3d9eff;
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.addCart:hover{
+  text-decoration:underline;
+}
+
+.blueButton {
+    background-color: #3d9eff;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom:10px;    
+}
+
+/* small links */
+.smallLink{
+    font-size: 10px;
+    color:grey;
+    text-decoration:underline;
+}
+
+/* fineprint */
+.finePrint {
+    font-size:10px;
+    color:lightgrey;
+}
+
+
+/*Comparison Prevention */
+.comparison-details {
+    display: none; /* Hide by default */
+  }
+  .show-details {
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+  }
+
+/* Confirmshame subscribe */
+.modal {
+z-index: 1;
+background-color: rgba(0, 0, 0, 0.5);
+width:250px;
+}
+
+.modal-content {
+background-color: #fefefe;
+padding: 10px;
+border: 1px solid #888;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+/* Disguised ads */
+.ad{
+    width:200px;
+    height:100px;
+    border-style: dashed;
+    border-color:lightgray;
+    position:relative;
+    padding:5px;
+}
+
+/* Fake scarcity */
+.notif{
+    width:300px;
+    height:100px;
+    border-style:solid;
+    border-color: grey;
+    padding:5px;
+}
+
+/*Fake social proof */
+.review {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width:50%;
+  }
+  
+  .rating {
+    color: gold;
+  }
+
+  /*Fake urgency*/
+.notification {
+    position: fixed;
+    width:200px;
+    background-color: #f03225;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+
+  /* Hidden Costs */
+  .cart {
+    height: 100px; /* Set the height of the cart */
+    background-color: #f8f8f8;
+    border: 1px solid #3e3e3e;
+    overflow-y: auto; /* Enable vertical scrolling */
+  }
+  
+  .cart-item {
+    padding:5px;
+    background-color:rgba(135, 120, 120, 0.313);
+    text-align:right;
+  }
+  
+  .total {
+    background-color:rgba(0, 128, 0, 0.363);
+    padding:5px;
+    text-align:right;
+  }
+
+
+  /** Scholarship **/
+.scholarship {
+  padding:10px;
+  background-color:rgb(243, 243, 243);
+  width:50%;
+}

@@ -1,0 +1,408 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(58, 58, 58);
+  }
+
+h1 {
+  font-size:60px;
+  color:white;
+}
+
+h2 {
+  font-size:40px;
+  color:white;
+}
+
+img {
+  width:inherit;
+  filter:grayscale();
+}
+
+.homeBanner {
+  background-color:rgb(96, 96, 96);
+  padding:5px;
+  margin-bottom:5px;
+  margin-left:-20px;
+  text-align:center;
+  color:white;
+}
+.homeBanner h1 {
+  font-size:80px;
+}
+
+  /* navbar */
+  .navbar {
+    width:100%;
+    border-bottom-style: solid;
+    background-color: #333;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .homeSectionsContainer {
+    display: flex;
+    flex-wrap: wrap; /* Allow the sections to wrap */
+    justify-content: space-around; /* Center the sections horizontally */
+  }
+
+  .homeSection {
+    margin:20px;
+    padding:10px;
+    background-color:rgb(96, 96, 96);
+    color:white;
+    border-radius:5px;
+    height:fit-content;
+    flex: 1 1 300px; /* Minimum width of 300px, can grow and shrink */
+  }
+
+  /* Dark Light Toggle */
+  .switch {
+    position: relative;
+    display: block;
+    float: right;
+    width: 60px;
+    height: 34px;
+    top: 10px;
+    right:10px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    transition: 0.4s;
+    -webkit-transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(79, 79, 79);
+    transition: 0.4s;
+    -webkit-transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: rgb(228, 228, 228);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: white;
+  }
+
+
+  
+  /* Subscribe */
+  .modal {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .modal-content {
+    background-color: rgb(96, 96, 96);
+    color:white;
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 200px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .blueButton {
+    background-color: #3d9eff;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;    
+}
+
+/*cookies*/
+  .cookies-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 20px;
+    text-align: left;
+  }
+  
+  .cookies-banner p {
+    margin: 0;
+    padding:10px;
+    font-size:small;
+  }
+  
+  .cookies-banner a {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .cookies-banner button {
+    background-color: #3d9eff;
+    color: white;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: none;
+    padding: 5px 10px;
+    margin-left:10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+/*Sale Banner*/
+.notification {
+  position: fixed;
+  position:absolute;
+  width:200px;
+  background-color: #f03225;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+  /*z-index: 1;*/
+}
+
+/*Reviews*/
+.review {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  margin-left: 20px;
+  padding: 10px;
+  width:50%;
+  background-color:rgb(96, 96, 96);
+  color:white;
+}
+
+.rating {
+  color: gold;
+}
+
+/*Products*/
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.product {
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: left;
+  font-family:arial;
+  background-color:rgb(96, 96, 96);
+  color:white;
+}
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popup {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left:0px;
+  background-color: rgb(45, 45, 45);
+  padding: 10px;
+  border: 1px solid #ccc;
+  z-index: 1;
+}
+
+.product:hover .popup {
+  display: block;
+}
+
+.cart {
+  height: 100px; /* Set the height of the cart */
+  background-color: #f8f8f8;
+  border: 1px solid #3e3e3e;
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.cart-item {
+  padding:5px;
+  background-color:rgba(135, 120, 120, 0.313);
+  text-align:right;
+}
+
+.total {
+  background-color:rgba(0, 128, 0, 0.363);
+  padding:5px;
+  text-align:right;
+
+}
+
+.addCart {
+  background-color: #3d9eff;
+  color: white;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute; /* Position the button absolutely */
+  bottom: 10px;
+  right: 10px;
+}
+
+.addCart:hover{
+  text-decoration:underline;
+}
+
+#checkout-btn{
+  margin:10px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#checkout-message{
+  margin:10px;
+}
+
+/* Dropdown menu -------------------------*/
+/* Dropdown container */
+.dropdown {
+  display: inline-block;
+  position:fixed;
+  z-index:3;
+  right:0;
+  border-radius:5px;
+}
+
+/* Dropdown button */
+.dropbtn {
+  background-color: green;
+  color:white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  width:300px;
+  float:right;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown content when the dropdown button is clicked */
+.show {
+  display: block;
+}
+
+/* Preselection */
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cookie-types {
+  margin-bottom: 20px;
+}
+
+.cookie-type {
+  margin-bottom: 10px;
+}
+
+.cookie-type label {
+  display: block;
+  font-weight: bold;
+}
+
+.cookie-type input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
